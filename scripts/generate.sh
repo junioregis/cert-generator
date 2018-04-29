@@ -2,10 +2,10 @@
 
 # CRT and KEY
 openssl req -x509 -nodes \
-            -days 365 \
+            -days   365 \
             -newkey rsa:2048 \
-            -keyout /certs/ca.key \
-            -out    /certs/ca.crt
+            -out    /certs/ca.crt \
+            -keyout /certs/ca.key
 
 # P12
 openssl pkcs12 -export -in /certs/ca.crt -inkey /certs/ca.key -out /certs/ca.p12
